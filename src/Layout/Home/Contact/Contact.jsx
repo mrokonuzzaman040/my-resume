@@ -6,10 +6,10 @@ const Contact = () => {
             <div class="max-w-2xl lg:max-w-5xl mx-auto">
                 <div class="text-center">
                     <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
-                        Contact us
+                        Contact Me
                     </h1>
                     <p class="mt-1 text-gray-600 dark:text-gray-400">
-                        We'd love to talk about how we can help you.
+                        Love to talk about how we can help you.
                     </p>
                 </div>
 
