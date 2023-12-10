@@ -10,7 +10,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-between">
                         <Link to={'/'} className="inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white">
                             <img className="w-10 h-auto" src={logo} alt="Logo" />
-                                Rokon
+                            Rokon
                         </Link>
                         <div className="sm:hidden">
                             <button type="button" className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-gray-700 dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-collapse="#navbar-image-and-text-2" aria-controls="navbar-image-and-text-2" aria-label="Toggle navigation">
