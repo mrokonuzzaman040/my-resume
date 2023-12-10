@@ -6,21 +6,21 @@ const Contact = () => {
             <div class="max-w-2xl lg:max-w-5xl mx-auto">
                 <div class="text-center">
                     <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
-                        Contact Me
+                        Contact us
                     </h1>
                     <p class="mt-1 text-gray-600 dark:text-gray-400">
-                        Love to talk about how we can help you.
+                        We'd love to talk about how we can help you.
                     </p>
                 </div>
 
-                <div class="mt-12 grid items-center lg:grid-cols-2 gap-6 lg:gap-16">
+                <div class="mt-12 grid items-center">
                     <div class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-8 dark:border-gray-700">
                         <h2 class="mb-8 text-xl font-semibold text-gray-800 dark:text-gray-200">
                             Fill in the form
                         </h2>
-
                         <form>
                             <div class="grid gap-4">
+
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
                                         <label for="hs-firstname-contacts-1" class="sr-only">First Name</label>
@@ -63,6 +63,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 
