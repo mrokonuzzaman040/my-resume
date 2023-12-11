@@ -1,0 +1,4590 @@
+{
+	"info": {
+		"_postman_id": "8fc47a64-4732-4c2c-95be-eb47a4e2647a",
+		"name": "Consumer Engagement Suite Credit Report",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4887975"
+	},
+	"item": [
+		{
+			"name": "(OAUTH - JWT)",
+			"item": [
+				{
+					"name": "Delivery Token",
+					"item": [
+						{
+							"name": "JWT - Bahd Guy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"client_assertion\", response.jwe);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "symmetricKey",
+											"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+											"type": "text"
+										},
+										{
+											"key": "base64PrivateKey",
+											"value": "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",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "delivery",
+											"type": "text"
+										},
+										{
+											"key": "issuer",
+											"value": "EFX",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "mock_delivery:bahdguy",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "59",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/generate-jwt-claim",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"generate-jwt-claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "symmetricKey",
+													"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+													"type": "text"
+												},
+												{
+													"key": "base64PrivateKey",
+													"value": "MIIJKQIBAAKCAgEA0apwNolXYFgVb1C6uJlPP2zI0EgCJP9VMqynYyLDFyDqCd0YMBS7SyGfIO9YuiahUgEPuO8bAjMNUwwsOLcbHdfflglNZTc72YAgrNS9pSbdoDHHFib1jCQA7CkV32P6+oRZ/c0lqEjHdXedBj6r4jYCeBxwWnPj4HIpbYS4NPsezcIZHi93SJndS0bhMsgnfS3nrX3M5hOeVhKN7VHBJWWguVi5hDYrgxRLpYMmkbji9aTZ4dlfAuqFC3sWYH3DkCM9sU0YZ+6Gwmmf7aqAZTzlSy4rJNlSe1JNdipWOZUOTKsG5nWPE0kwZW2KL9qcgtY+0VuD0tgVNzCKPTJ/1TiiSnBMfaMUBBjtk0YCU+mnwpJ1mu2p4Qbiwfa7pThdpv5xDODABHssB0CKdfk3fd9Sno9fF7UuIxd9fpVl71GRmlXmxkqhi0hENM7/LHYAcRkRoPy6hbx7YifJwxaC6nWbU5ciq2HrUhep5mfMiMR6wsNMFlKt7v6yCeBAhXZ3EJQTQN8z76v3GKrk0QIVtMmBkQ/YLEx9tfmvLTWzaQ0Phy0YourY13ZWRoXLsMyGgGLP42uTLQ4OZwdgKxUiAMH9FBea6pQc+/07Z0pHcMNnD2qSCdH3Po9mFRhKR2ijqaeZk75jTLtDJRFGEfidRlvgEfkYrMjuSTtRj56YR1MCAwEAAQKCAgEAsgqtp2IRVLr32MMRDFkDtrRGArhjOc+pJZL/wWtvh2Bn3WBmfc3dDfvLCUi2a70KGHzWQRCqOr/nfLJFixPSbxE1yE617lFs/VGUba9qK6hJYxNiICmNMigQsHpjHIPmSH3DfYaLh8/lsJaWPQtTIpECn8RmlCj9RUcsbtfZJQRqMAe3FK7x+DDQfm/+JAVboy0sI2NEb8wRFL5Ez1YxUfRu+3Wgc+kcIf9GDZLFWdFKyZXnf6X6zJshx5IKen3RZ8DFTp5NL1SaEtVm/Ydf6JhBjgnykSQKqrZFGSbyeYtdzTUecu05RgNMmZTfV6uoZGJSja3Mz2q2+Vq6ySTs7zRltsQ6leHCPpAB586MvnaeUYjBkG2tNWhpVCAkZE2P7F/QU5Cwv5y9/7UCKPQ+ezk8V1Sdram4y0QE8mcxke9Kc4WU02Vs+1rGxRxgu9ISPOM/8CnZfB8mDEOnph53gu01A6RQ2Uqe1+WiI/DKgBJo+c0Bq0KXALGNRBIgwlY9ra1FPgglhh5PbKspWsuGDbGumv6Wny63Bij2Dr0GB7pkSomrreOP/8IjM8BiioaMGP+mNKmoiVjCOuKUI6eUMmh5SCEbUr2tBjrI4oeB7c2H/kTVfUrxPjkF9V9TLp/xoqY4h59sSFwWuXq/QgH2HK95n5nsYqCM8oea7iJjHEECggEBAPy+wkrZ0/0EwveLyde5H6BJYbiy9QVW8MZC7Ery8PuxrzYduCNiIk/HFlyVaOZRweN520KgsS9S+wUS9ozamrRDmmZ+4ilO1h6rzDsgtvGKdlBZkypDM7Nq6PwFYdcOTU5j7jGAPdk1mXpw23nqKvjF9737BIJgkl9AsYLTu3iW2zm7aVy8jUGtNgPdlGxxeP4h0dyAcs53HA2cowOSvUQAZMN+1KAyfpNznZVFGuNztbzG5CtUnL/sW6FKS/6W7vb5h4wtGIqf6lNUddpFRsCf3zZXsJxnCvYDFfe927DvBk6LzZ5P6oTdiwWSDQO3Ng+aBDvUzd+G3FkoEQVOnOkCggEBANRdqCdIHK8qwtJxjnmUwA5t/9Afc9gt+ht/tKeRaOqkrC2Kf0tbyNNl1yv3amgAETbSJ5gWXFT+HLJsDCUoDpkps69oqNEBTV5uN7q4rs1jo7n+v+0s5swFeQjJ+9XeVY4lhpWoCFFX7KpsuKF1I8H8ddZ4+mOjsruH10qUWNYAuMCnBT7r+aVh66gWDt/v45X1D2tYUtnCIXBLUuOz+nsBiFJHGX8B9tdHnMK3qd6XefvgBMo9QwmTiaf/udRJCnwwf2CrdhsUgHz0cVWjmaV/+yJq857a6zioIgtngFRmOTeNE1BSM9MBBRJz34/mdM9mdd4JIp6gzQojgapgLNsCggEAT4tx9sDLuSwQeHxkUCKRU48E1G5uMvoD2UIiwAvp0C1B6ZQ86dXu2pDb9tOHKkW88ezeFwAgA7boDdbEBdyfJ/DG3U89uqZ3OTv0kP9g1HAxgGRQrtJrqSISpY7EFj0IE43b33RvAred0C1Ixfvu/lDAAejIqIfgSV5A/93HeNJxuJ/FL0ygYHU1NM498ktcOw9Fz1IVz+koyRftLii2rHo7PFPkc26w65NNmzcemUtHfVxTX1fH5Zdr1z1c4Yl7N/ucr39Z4/ckdol0dferpuAqDh5XFUJQ7tBVz5zPUcZIg9v4IMUiGCLpqB0pP2wf9ZURlAsLqDf3jY/Qm4z8UQKCAQEAu3DS+6D9mGqgvMh4Hb36aoISmas5P6UNLXphhMmmlfy08BlfU692qYgpDGh75cGxb/a79dQ+uNH1mFIfwigCApQ5QeiZoKiKln+n9soNl8GLgJ5m3ruUFp35/5TwEAwG7ckXaj5+4PU/Mgl2SSQwZIclpyDuuEWDe1xh3TTk2DaY24pP6gK0PZIZQyn9BREiinhbnL6/me5sP0ZsqghwXGO05BJXYa/lJIzTw1YCvDJs+7D16V97LRepF7xyU/oIJCdWNogAXdSRuDi1VAZrlhVJH07RKvRFS6OzMOew8E2t0OdXFb0IewRaargVqliZ33mrLUhY4zRA5eMDDtOGowKCAQBUdiZqxIV97lrjCygiBZBzTRuuNI8NOaYFV0sblBSwl8ijJpkbo4tEhnhhkrMz01uMlcfkkFjZO7XsmlidjoVdV1iQtvB8iXybUCz2TrBo6+pXg0jydXa7k2o/AmeWzPktH9Ladi07rM3FW/IUPT0PtHm6DGKKmZrqZgM3c8/GSTlVS7EmdIocmTo8ojQ06QhXvOX0Az3BsAkLIWbhM5f9D294eNwA31weT4III61QBrNS0c+B2aNboITNg8ICqH2gzHRODM/JAGCkVNHXEq30cI3lxStl49JePfkEJGpxBjzFauQIvTRSycpinX6MlGET7jSL2eSTrS7eRqVW4btC",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "enrollment",
+													"type": "text"
+												},
+												{
+													"key": "issuer",
+													"value": "EFX",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "mock_enrollment:mock_enrollment",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "59",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/generate-jwt-claim",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"generate-jwt-claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "OAUTH - Bahd Guy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", response.access_token);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "scope",
+											"value": "delivery",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "jwt-bearer",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "mock_delivery",
+											"type": "text"
+										},
+										{
+											"key": "client_assertion",
+											"value": "{{client_assertion}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/token",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "scope",
+													"value": "delivery",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "jwt-bearer",
+													"type": "text"
+												},
+												{
+													"key": "api_key",
+													"value": "mock_delivery",
+													"type": "text"
+												},
+												{
+													"key": "client_assertion",
+													"value": "eyJhbGciOiJSUzI1NiIsImN0eSI6Imp3dCIsImVuYyI6IkEyNTZHQ00ifQ.ZXlKaGNHbExaWGtpT2lKMFpYTjBTMlY1U0dGeVpHTnZaR1ZrSWl3aVkzUjVJam9pYW5kbElpd2lZV3huSWpvaVpHbHlJaXdpWlc1aklqb2lRVEkxTmtkRFRTSjkuLndGVlFmMllid1VlUUpnblUuSkd3VU41YjZhUWVoTlJ1OHpMUlVLMzNsbXN1ZWNOZkZEX3ZxaW4xSXhaUEl6VTA3ZW9rcV9wVmMybERQbGFaZVA2akI0a1dpWHYweHFrT1k1VWd4REtHc0c3WENCMEVCVWtmZGlCTTFxRmFEeGs3ZVpkelJpSEs5MUc2empaamRUenE4LVFsRjNhM0kxVndmRExKMFZCM2VoZE5VeDNWcEpSbGs0bGQtbDZmTlpCTFA0ZXVhc3kxYTdTcnFMeEtmVm5iZExLSnQ3UTJKYWc2eW5oM0dwMmtPVEEwbDA3OFVvUDRHVXBBTjBRLnlESG81NTVUeHM5cmJ3d2RZM21Qd3c.dO9cCns3UZjBsiaUD1RCvtmbYzBgp88EZMXooHZajPAlOYSTMPDSTa41hKZay7YdaNUXPffEQHfMjDJ7_nWDERjq9xjhTLeOKMQ_1w4GXevgJFIzRgfITu1tqL4C8u9byurUa3NTJkeMGH9bW-4rC1VqyrXihdn504dThZ8ATnLNg9h-xtbo0IqkzDXzRGVRbqcDh_9yqGVqj32RhdJ7wEIHulhcdvhyFKY7-idU2-eOTxDqnu5Zb6dBw5TgWMM7uEyYD6n8s9NYA1cJqUrWv6A1hVOixSoKZD7qtC0o8_5neDc_j6pbT0eeRshQVQx_3Tay_wSt2nT5cnNI08WwjQ",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/token",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "JWT - Yudha Mahn",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"client_assertion\", response.jwe);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "symmetricKey",
+											"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+											"type": "text"
+										},
+										{
+											"key": "base64PrivateKey",
+											"value": "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",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "delivery",
+											"type": "text"
+										},
+										{
+											"key": "issuer",
+											"value": "EFX",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "mock_delivery:yudhamahn",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "59",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/generate-jwt-claim",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"generate-jwt-claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "symmetricKey",
+													"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+													"type": "text"
+												},
+												{
+													"key": "base64PrivateKey",
+													"value": "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",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "enrollment",
+													"type": "text"
+												},
+												{
+													"key": "issuer",
+													"value": "EFX",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "mock_enrollment:mock_enrollment",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "59",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/generate-jwt-claim",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"generate-jwt-claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "OAUTH - Yudha Mahn",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", response.access_token);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "scope",
+											"value": "delivery",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "jwt-bearer",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "mock_delivery",
+											"type": "text"
+										},
+										{
+											"key": "client_assertion",
+											"value": "{{client_assertion}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/token",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "scope",
+													"value": "delivery",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "jwt-bearer",
+													"type": "text"
+												},
+												{
+													"key": "api_key",
+													"value": "mock_delivery",
+													"type": "text"
+												},
+												{
+													"key": "client_assertion",
+													"value": "{{client_assertion}}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/token",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "JWT - Ivana Pony",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"client_assertion\", response.jwe);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "symmetricKey",
+											"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+											"type": "text"
+										},
+										{
+											"key": "base64PrivateKey",
+											"value": "MIIJKQIBAAKCAgEA0apwNolXYFgVb1C6uJlPP2zI0EgCJP9VMqynYyLDFyDqCd0YMBS7SyGfIO9YuiahUgEPuO8bAjMNUwwsOLcbHdfflglNZTc72YAgrNS9pSbdoDHHFib1jCQA7CkV32P6+oRZ/c0lqEjHdXedBj6r4jYCeBxwWnPj4HIpbYS4NPsezcIZHi93SJndS0bhMsgnfS3nrX3M5hOeVhKN7VHBJWWguVi5hDYrgxRLpYMmkbji9aTZ4dlfAuqFC3sWYH3DkCM9sU0YZ+6Gwmmf7aqAZTzlSy4rJNlSe1JNdipWOZUOTKsG5nWPE0kwZW2KL9qcgtY+0VuD0tgVNzCKPTJ/1TiiSnBMfaMUBBjtk0YCU+mnwpJ1mu2p4Qbiwfa7pThdpv5xDODABHssB0CKdfk3fd9Sno9fF7UuIxd9fpVl71GRmlXmxkqhi0hENM7/LHYAcRkRoPy6hbx7YifJwxaC6nWbU5ciq2HrUhep5mfMiMR6wsNMFlKt7v6yCeBAhXZ3EJQTQN8z76v3GKrk0QIVtMmBkQ/YLEx9tfmvLTWzaQ0Phy0YourY13ZWRoXLsMyGgGLP42uTLQ4OZwdgKxUiAMH9FBea6pQc+/07Z0pHcMNnD2qSCdH3Po9mFRhKR2ijqaeZk75jTLtDJRFGEfidRlvgEfkYrMjuSTtRj56YR1MCAwEAAQKCAgEAsgqtp2IRVLr32MMRDFkDtrRGArhjOc+pJZL/wWtvh2Bn3WBmfc3dDfvLCUi2a70KGHzWQRCqOr/nfLJFixPSbxE1yE617lFs/VGUba9qK6hJYxNiICmNMigQsHpjHIPmSH3DfYaLh8/lsJaWPQtTIpECn8RmlCj9RUcsbtfZJQRqMAe3FK7x+DDQfm/+JAVboy0sI2NEb8wRFL5Ez1YxUfRu+3Wgc+kcIf9GDZLFWdFKyZXnf6X6zJshx5IKen3RZ8DFTp5NL1SaEtVm/Ydf6JhBjgnykSQKqrZFGSbyeYtdzTUecu05RgNMmZTfV6uoZGJSja3Mz2q2+Vq6ySTs7zRltsQ6leHCPpAB586MvnaeUYjBkG2tNWhpVCAkZE2P7F/QU5Cwv5y9/7UCKPQ+ezk8V1Sdram4y0QE8mcxke9Kc4WU02Vs+1rGxRxgu9ISPOM/8CnZfB8mDEOnph53gu01A6RQ2Uqe1+WiI/DKgBJo+c0Bq0KXALGNRBIgwlY9ra1FPgglhh5PbKspWsuGDbGumv6Wny63Bij2Dr0GB7pkSomrreOP/8IjM8BiioaMGP+mNKmoiVjCOuKUI6eUMmh5SCEbUr2tBjrI4oeB7c2H/kTVfUrxPjkF9V9TLp/xoqY4h59sSFwWuXq/QgH2HK95n5nsYqCM8oea7iJjHEECggEBAPy+wkrZ0/0EwveLyde5H6BJYbiy9QVW8MZC7Ery8PuxrzYduCNiIk/HFlyVaOZRweN520KgsS9S+wUS9ozamrRDmmZ+4ilO1h6rzDsgtvGKdlBZkypDM7Nq6PwFYdcOTU5j7jGAPdk1mXpw23nqKvjF9737BIJgkl9AsYLTu3iW2zm7aVy8jUGtNgPdlGxxeP4h0dyAcs53HA2cowOSvUQAZMN+1KAyfpNznZVFGuNztbzG5CtUnL/sW6FKS/6W7vb5h4wtGIqf6lNUddpFRsCf3zZXsJxnCvYDFfe927DvBk6LzZ5P6oTdiwWSDQO3Ng+aBDvUzd+G3FkoEQVOnOkCggEBANRdqCdIHK8qwtJxjnmUwA5t/9Afc9gt+ht/tKeRaOqkrC2Kf0tbyNNl1yv3amgAETbSJ5gWXFT+HLJsDCUoDpkps69oqNEBTV5uN7q4rs1jo7n+v+0s5swFeQjJ+9XeVY4lhpWoCFFX7KpsuKF1I8H8ddZ4+mOjsruH10qUWNYAuMCnBT7r+aVh66gWDt/v45X1D2tYUtnCIXBLUuOz+nsBiFJHGX8B9tdHnMK3qd6XefvgBMo9QwmTiaf/udRJCnwwf2CrdhsUgHz0cVWjmaV/+yJq857a6zioIgtngFRmOTeNE1BSM9MBBRJz34/mdM9mdd4JIp6gzQojgapgLNsCggEAT4tx9sDLuSwQeHxkUCKRU48E1G5uMvoD2UIiwAvp0C1B6ZQ86dXu2pDb9tOHKkW88ezeFwAgA7boDdbEBdyfJ/DG3U89uqZ3OTv0kP9g1HAxgGRQrtJrqSISpY7EFj0IE43b33RvAred0C1Ixfvu/lDAAejIqIfgSV5A/93HeNJxuJ/FL0ygYHU1NM498ktcOw9Fz1IVz+koyRftLii2rHo7PFPkc26w65NNmzcemUtHfVxTX1fH5Zdr1z1c4Yl7N/ucr39Z4/ckdol0dferpuAqDh5XFUJQ7tBVz5zPUcZIg9v4IMUiGCLpqB0pP2wf9ZURlAsLqDf3jY/Qm4z8UQKCAQEAu3DS+6D9mGqgvMh4Hb36aoISmas5P6UNLXphhMmmlfy08BlfU692qYgpDGh75cGxb/a79dQ+uNH1mFIfwigCApQ5QeiZoKiKln+n9soNl8GLgJ5m3ruUFp35/5TwEAwG7ckXaj5+4PU/Mgl2SSQwZIclpyDuuEWDe1xh3TTk2DaY24pP6gK0PZIZQyn9BREiinhbnL6/me5sP0ZsqghwXGO05BJXYa/lJIzTw1YCvDJs+7D16V97LRepF7xyU/oIJCdWNogAXdSRuDi1VAZrlhVJH07RKvRFS6OzMOew8E2t0OdXFb0IewRaargVqliZ33mrLUhY4zRA5eMDDtOGowKCAQBUdiZqxIV97lrjCygiBZBzTRuuNI8NOaYFV0sblBSwl8ijJpkbo4tEhnhhkrMz01uMlcfkkFjZO7XsmlidjoVdV1iQtvB8iXybUCz2TrBo6+pXg0jydXa7k2o/AmeWzPktH9Ladi07rM3FW/IUPT0PtHm6DGKKmZrqZgM3c8/GSTlVS7EmdIocmTo8ojQ06QhXvOX0Az3BsAkLIWbhM5f9D294eNwA31weT4III61QBrNS0c+B2aNboITNg8ICqH2gzHRODM/JAGCkVNHXEq30cI3lxStl49JePfkEJGpxBjzFauQIvTRSycpinX6MlGET7jSL2eSTrS7eRqVW4btC",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "delivery",
+											"type": "text"
+										},
+										{
+											"key": "issuer",
+											"value": "EFX",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "mock_delivery:ivanapony",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "59",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/generate-jwt-claim",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"generate-jwt-claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "symmetricKey",
+													"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+													"type": "text"
+												},
+												{
+													"key": "base64PrivateKey",
+													"value": "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",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "enrollment",
+													"type": "text"
+												},
+												{
+													"key": "issuer",
+													"value": "EFX",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "mock_enrollment:mock_enrollment",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "59",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/generate-jwt-claim",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"generate-jwt-claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "OAUTH - Ivana Pony",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", response.access_token);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "scope",
+											"value": "delivery",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "jwt-bearer",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "mock_delivery",
+											"type": "text"
+										},
+										{
+											"key": "client_assertion",
+											"value": "{{client_assertion}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/token",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "scope",
+													"value": "delivery",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "jwt-bearer",
+													"type": "text"
+												},
+												{
+													"key": "api_key",
+													"value": "mock_delivery",
+													"type": "text"
+												},
+												{
+													"key": "client_assertion",
+													"value": "eyJhbGciOiJSUzI1NiIsImN0eSI6Imp3dCIsImVuYyI6IkEyNTZHQ00ifQ.ZXlKaGNHbExaWGtpT2lKMFpYTjBTMlY1U0dGeVpHTnZaR1ZrSWl3aVkzUjVJam9pYW5kbElpd2lZV3huSWpvaVpHbHlJaXdpWlc1aklqb2lRVEkxTmtkRFRTSjkuLnVnekF3b0VPTHlmR2lobnkueko4UWV3eG5oUEoycGJ5V0wycG0yT2RZZUNuOUNXYk9TenNZbFhYOWhpbWFXQ085VlJBSlVLQ0pna0Jub3F2UGpfRVFMSXhKdWN3RkpOMWRHSUdMREwwNW40MmZDc0dnZ1R2QzlGeFQtTW1wV1FyS3ZROTBXdUJiZjlFTTNDZlBvSG1rRUhVaVZUclh3Umg2SlNtMFdtcUVMVEpGOUxpYVpvZk9GeGR6dGtDVmV5c0NWTjFCNXFzcEYzR1drNTRyYkxHYnpKaTRzZWdCVmp0dms5UnMzX29zQlRwOFlCU3U2dFZwak9sNlJHM3YucGlNblJPZ0RPSlc0eUZZT1d3RWVvUQ.ileTU1AEFSv24B7nlVRt-mOi2wRV1RAoY8KjkKWI9vKbpPBIPqCbF_BdnatGH6Dl6-F6H3FM_F6Dk1ZR2mKsQoWymbjn0k8IDIDBsb-Di_Istmx2HQcvF9se0I8ncdRWfWHpNb5MvfiI8vvKKN4nnhmr8Zc4soXBqt6OJaqmHRLwk7Lkgrv-eeqotgcZ7L1rnqt9qAw1fL1AfMsyRAu82yRNP6qwUtUBrhyUbD_PC5PVODUIrRXjhvpePchUW3o4xpMcyTUfpHaZQS3btw1jGIXN5etxHW7ULNHlmK7DQul4aBFxVYbILJiIUwGG9isZ1vrlZIXQ6NJNdvdU_PpuOw",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/token",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "JWT - Mister Fahntastic",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"client_assertion\", response.jwe);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "symmetricKey",
+											"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+											"type": "text"
+										},
+										{
+											"key": "base64PrivateKey",
+											"value": "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",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "delivery",
+											"type": "text"
+										},
+										{
+											"key": "issuer",
+											"value": "EFX",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "mock_delivery:misterfahntastic",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "59",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/generate-jwt-claim",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"generate-jwt-claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "symmetricKey",
+													"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+													"type": "text"
+												},
+												{
+													"key": "base64PrivateKey",
+													"value": "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",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "enrollment",
+													"type": "text"
+												},
+												{
+													"key": "issuer",
+													"value": "EFX",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "mock_enrollment:mock_enrollment",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "59",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/generate-jwt-claim",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"generate-jwt-claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "OAUTH - Mister Fahntastic",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", response.access_token);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "scope",
+											"value": "delivery",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "jwt-bearer",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "mock_delivery",
+											"type": "text"
+										},
+										{
+											"key": "client_assertion",
+											"value": "{{client_assertion}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/token",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "scope",
+													"value": "delivery",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "jwt-bearer",
+													"type": "text"
+												},
+												{
+													"key": "api_key",
+													"value": "mock_delivery",
+													"type": "text"
+												},
+												{
+													"key": "client_assertion",
+													"value": "eyJhbGciOiJSUzI1NiIsImN0eSI6Imp3dCIsImVuYyI6IkEyNTZHQ00ifQ.ZXlKaGNHbExaWGtpT2lKMFpYTjBTMlY1U0dGeVpHTnZaR1ZrSWl3aVkzUjVJam9pYW5kbElpd2lZV3huSWpvaVpHbHlJaXdpWlc1aklqb2lRVEkxTmtkRFRTSjkuLkhWaWF6V2xpWk15eDFONG8uQmFCY0MwX1RLN2tTc29sSTRkS2xNZXIwNFNFaUs5WkQ2Q0RFemkzSVFfTDBTb2x4Y1hSc0duaXRSTy1wT0RaOU9yWTc4OWNNcEdneTVhQWo5bXc4cGI1U0JfUkJLbGszM3VFaDY2elNHVVlpWHQ0LXFqOEZ3V3BsS21zY3llQ2hqOHFiNjl5dExOLXZiLWJoNU5LZkU4Nzcwc21IbmQtYUtDRnkyVVlrbk9OMmFQandwUzAyNGk5cFVJZG0xeVk4ZjFfSWV6VEpqLWpvaVFzRVRLOElrVXE1V21xZzJkWEFoNzYyUXZnMWpzUG1TVjBRU3lRMXhBLlhKbUtaSFlJQmN4NWhLRjJuX0x2RVE.KsqJCgvzCP5VDqhj5MA5ksfEoWamsdEwkujoMObekwAGzj6UfDOyMARAwYMf-7tMKs0YS73_SjV1N_wVcEdgGzWVwpHqAJNkRJh8zCdmZRPdD4S5CL1WNxtOLg7gOi7B0ElvOEGm29J5Q0JfoujfE_sprvDs6zL1E11GnI_Bz9X6tnaDWFY8t3K68SCP6cluxJezQOCIiQJACNuYnXEsm-UxwFpMu_Atrclc24MLRHIXJaMWxzYvSCSPMx66YSjm_Qkb99ySidkaUk4GR9hk6aLvcmyQgc5DQZAmti241q_apAjdVjUEH2X1swCVgj1BB8CEjlDp5XbbwkdQMGq2Pg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/token",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Fulfillment Token",
+					"item": [
+						{
+							"name": "JWT - Bahd Guy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"client_assertion\", response.jwe);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "symmetricKey",
+											"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+											"type": "text"
+										},
+										{
+											"key": "base64PrivateKey",
+											"value": "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",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "issuer",
+											"value": "EFX",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "mock_fulfillment:bahdguy",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "59",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/generate-jwt-claim",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"generate-jwt-claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "symmetricKey",
+													"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+													"type": "text"
+												},
+												{
+													"key": "base64PrivateKey",
+													"value": "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",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "enrollment",
+													"type": "text"
+												},
+												{
+													"key": "issuer",
+													"value": "EFX",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "mock_enrollment:mock_enrollment",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "59",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/generate-jwt-claim",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"generate-jwt-claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "OAUTH - Bahd Guy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", response.access_token);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "scope",
+											"value": "fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "jwt-bearer",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "mock_fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "client_assertion",
+											"value": "{{client_assertion}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/token",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "scope",
+													"value": "fulfillment",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "jwt-bearer",
+													"type": "text"
+												},
+												{
+													"key": "api_key",
+													"value": "mock_fulfillment",
+													"type": "text"
+												},
+												{
+													"key": "client_assertion",
+													"value": "eyJhbGciOiJSUzI1NiIsImN0eSI6Imp3dCIsImVuYyI6IkEyNTZHQ00ifQ.ZXlKaGNHbExaWGtpT2lKMFpYTjBTMlY1U0dGeVpHTnZaR1ZrSWl3aVkzUjVJam9pYW5kbElpd2lZV3huSWpvaVpHbHlJaXdpWlc1aklqb2lRVEkxTmtkRFRTSjkuLngzZnc2MW0tUDhzczQ2T2wuT2FYdG56YUZYV0dIUFp3UkgtbFQtc2d4SlpzbXdWeHpfbW8xRG5Pb0hqZndJb1BoaWtHQ0JtT18xOWE1bUQ5Y0R1YmI0SE02ZEVOcURldDFCYWFwMEtvNkpWR0ROd2ZPdTlnZXhzRXBranZRbk1ZLVp2OVlGTU8wd3dVa3NXbUhqMGR1NUNTbW9XQjVJODNoVVA4TE9qYTBmdUxER2Z4djFIcTFyYUc5d0ZSb211SERIbDRGQWZEN01YbVBNS3Rzem1JT3lRQV9UZUdDdU9WWFJfbXRUNE55VEh3QmV2M1BMN0xoT0FHbXNhYldmTThBOFEuSjhTTjNPX1lUV0RwTm96ZHhlT2RPUQ.jzoB3jPE30RQqv4-wVbLw5argH4Y6Myxae4j-GpOKOE_jj362ZZrqbHpGRquTg-FNLQsdsvvJYrRGhgoj7Tek2bSZKFdVXpbt-fv88Ldy52MGNb76tQWkn4seQ2NsqPY-Fyug2gc0ip_DJatIaVYz-O2ypP4Va4uAAIfDXSZ88oi9de7P8tITEl9xy0Tpmt3eVf2o8FOb2eRlKyYIfXS4wluruLoN97l4tJ6f_xq6ompsarZvBs3Ys09IQb1dAuSCJPM4B7gDZq6-Vufuih19AG5_o5WTIwXrGUk22wEdu12Ebpn0vNlayVXzZ0xmdDhWxlbd1c8QVEAOQV8NwJsXQ",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/token",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "JWT - Ivana Pony",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"client_assertion\", response.jwe);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "symmetricKey",
+											"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+											"type": "text"
+										},
+										{
+											"key": "base64PrivateKey",
+											"value": "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",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "issuer",
+											"value": "EFX",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "mock_fulfillment:ivanapony",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "59",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/generate-jwt-claim",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"generate-jwt-claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "symmetricKey",
+													"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+													"type": "text"
+												},
+												{
+													"key": "base64PrivateKey",
+													"value": "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",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "enrollment",
+													"type": "text"
+												},
+												{
+													"key": "issuer",
+													"value": "EFX",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "mock_enrollment:mock_enrollment",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "59",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/generate-jwt-claim",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"generate-jwt-claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "OAUTH - Ivana Pony",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", response.access_token);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "scope",
+											"value": "fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "jwt-bearer",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "mock_fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "client_assertion",
+											"value": "{{client_assertion}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/token",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "scope",
+													"value": "fulfillment",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "jwt-bearer",
+													"type": "text"
+												},
+												{
+													"key": "api_key",
+													"value": "mock_fulfillment",
+													"type": "text"
+												},
+												{
+													"key": "client_assertion",
+													"value": "eyJhbGciOiJSUzI1NiIsImN0eSI6Imp3dCIsImVuYyI6IkEyNTZHQ00ifQ.ZXlKaGNHbExaWGtpT2lKMFpYTjBTMlY1U0dGeVpHTnZaR1ZrSWl3aVkzUjVJam9pYW5kbElpd2lZV3huSWpvaVpHbHlJaXdpWlc1aklqb2lRVEkxTmtkRFRTSjkuLklBeVBOUjZQNXpNZ3Brc3cuVUR0VFZLOXUwN2g0dy1UeE45elJxOFhjUmNTUmg3azNPMzNhRU1JdWtBQUJjcC1LY2VSNTVPOWhxWGZUbVB3YXB6UU9jX0E1S2VZSWFMY3JZLTJlVHM2YWlLd3RJemlVZmJCc2hjRUZldzZDdEg0VGd0Q0VscDdrR2RzQTBzbEg4dlpMRUV6WEpHQlNoZmxXNjAxN1d4Si16QTZHU3NVazY1MVBIcEFPbUcxdjVEak5ieHpBYk5PWUt4d09iTGxmVHMxQkgxVEkzTVRDek1mUEZhSi0xaGdJMWFmYTJzaWdmWTY3cldsSTFISlBiSEtaREJBTS5IU2RFYm9zRHV5QjZEMnVSbGRBR0Rn.EoeNm4-mWo05gTd8U2m2nuIbNhdJyliPiKSJ_NJ_RVPm3ZSIJOkVN9klyVblwZtQtFpTfv1r49TPxej_lSUoPV2CpXhTifgJC42nBNI4a0KkOLSeWZNt8qVrVzAgm7_gfTvElqiIVgRW7WNoLLgSlIkXfw6RiW9MOlj8_5TA-JPhCdvYC8TEbyN6HkHOVxx2opVxZZHB3OzSSOn2qKDrQjiJ4Uj77exD7-mjnpYEHM1lwkk0DoZOl-dgfpjEgJY-mimVZbKXk_0LTnmcwO2fAbnYBMrUJidMEoHBJI8u4gd0LsIj5Z0SV32IeaXE-q_HS1lzmABmwT1vfh44rof_yg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/token",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "JWT - Mister Fahntastic",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"client_assertion\", response.jwe);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "symmetricKey",
+											"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+											"type": "text"
+										},
+										{
+											"key": "base64PrivateKey",
+											"value": "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",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "issuer",
+											"value": "EFX",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "mock_fulfillment:misterfahntastic",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "59",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/generate-jwt-claim",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"generate-jwt-claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "symmetricKey",
+													"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+													"type": "text"
+												},
+												{
+													"key": "base64PrivateKey",
+													"value": "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",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "enrollment",
+													"type": "text"
+												},
+												{
+													"key": "issuer",
+													"value": "EFX",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "mock_enrollment:mock_enrollment",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "59",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/generate-jwt-claim",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"generate-jwt-claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "OAUTH - Mister Fahntastic",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", response.access_token);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "scope",
+											"value": "fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "jwt-bearer",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "mock_fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "client_assertion",
+											"value": "{{client_assertion}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/token",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "scope",
+													"value": "fulfillment",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "jwt-bearer",
+													"type": "text"
+												},
+												{
+													"key": "api_key",
+													"value": "mock_fulfillment",
+													"type": "text"
+												},
+												{
+													"key": "client_assertion",
+													"value": "eyJhbGciOiJSUzI1NiIsImN0eSI6Imp3dCIsImVuYyI6IkEyNTZHQ00ifQ.ZXlKaGNHbExaWGtpT2lKMFpYTjBTMlY1U0dGeVpHTnZaR1ZrSWl3aVkzUjVJam9pYW5kbElpd2lZV3huSWpvaVpHbHlJaXdpWlc1aklqb2lRVEkxTmtkRFRTSjkuLkF3cjJSb01ZZWlWRmZhRDcuUE9yOW5WVGx2Mm9WbVJNWjFZdkEwV01VQWNmcUZhMS1VVmF2TERkeVNwTVNmODVWNDloUjVSWVozRWdzb1VqdkpfQXJZSjMxVFJ0Sk5MWkEtNldEbTh2Y2N0REJlb2x0ZF9lVXZWZWRjSmtqTVhRTUpYVk84dDVKUjBuNlA3c090cXJyaVVVMk9DUGpxLS1HQkQxSEVnaUh0bi1FRjhVRjloRjVuOWhpdFVHVmZEMGVGZ0NlZ0gwOHJjMExyODJ2WW16U202cUVOMWFxNXBYMUxyNEU1UDNhQkxJTVJkUE5PX0hKVFR0VFJEUExKZGVfS29ZaEFMclZCNjRMMEEuYW5rN0s1MncxQXdSckxZa1B4cmZCQQ.hrQPWUPDHw7ivZ9UxMw1RRlbksVklSm6GfSNJeHx3ISoXq003Mh7N9v6MX5LHZ6MF4DNvS8mehCjClaza571nHOIR3ndRcN7UPswL83Wsgv4ddRi9glf2BhEg8e6cgRx-TDQzFmLn-6oNigYZNQhfQgi4sGHgasANJ1-MAKfM56-Sg7GI16HbMSyA4mUPYgetu4J6mCBnU4ODi6vsRmd9jyw278j5Er3jdGyEe32fgVOXNNqo-krV71o6QltzseNTJre7EEMqF5bw1ZWqMhEkbN2NR3DF7Nt6xTWaLuK6QDhDSupO-MhRA8OnpvQ8FmKYqakHKLL4R_gdXx9wnK3ZA",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/token",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "JWT - Yudha Mahn",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"client_assertion\", response.jwe);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "symmetricKey",
+											"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+											"type": "text"
+										},
+										{
+											"key": "base64PrivateKey",
+											"value": "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",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "issuer",
+											"value": "EFX",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "mock_fulfillment:yudhamahn",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "59",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/generate-jwt-claim",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"generate-jwt-claim"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "symmetricKey",
+													"value": "9qPQUcx3opE6LzwWXISka0WyUR4QXp0Y541T1yhm5rE",
+													"type": "text"
+												},
+												{
+													"key": "base64PrivateKey",
+													"value": "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",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "enrollment",
+													"type": "text"
+												},
+												{
+													"key": "issuer",
+													"value": "EFX",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "mock_enrollment:mock_enrollment",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "59",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/generate-jwt-claim",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"generate-jwt-claim"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						},
+						{
+							"name": "OAUTH - Yudha Mahn",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var response = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", response.access_token);",
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "scope",
+											"value": "fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "jwt-bearer",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "mock_fulfillment",
+											"type": "text"
+										},
+										{
+											"key": "client_assertion",
+											"value": "{{client_assertion}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/token",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"equifax",
+										"com"
+									],
+									"path": [
+										"personal",
+										"consumer-data-suite",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "scope",
+													"value": "fulfillment",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "jwt-bearer",
+													"type": "text"
+												},
+												{
+													"key": "api_key",
+													"value": "mock_fulfillment",
+													"type": "text"
+												},
+												{
+													"key": "client_assertion",
+													"value": "eyJhbGciOiJSUzI1NiIsImN0eSI6Imp3dCIsImVuYyI6IkEyNTZHQ00ifQ.ZXlKaGNHbExaWGtpT2lKMFpYTjBTMlY1U0dGeVpHTnZaR1ZrSWl3aVkzUjVJam9pYW5kbElpd2lZV3huSWpvaVpHbHlJaXdpWlc1aklqb2lRVEkxTmtkRFRTSjkuLjR4QU9iWmJuZVBWaV9FMUsuTHRaVWZ1LUlYZUF5aFdhYjdXM003ak5wZ1Z3eW9lLWw5NndiTURNOXdiMHJPMmoxZ1hVS1NXTUg1bjNKME5mRFZzZTlXTGhfUEhyZXBGSzdERng2LVJCQTFKZVBYOFpyd0ZfNnJxNHEyTzB2Y2tweXdOajNuRnQ5a2hZaEtvcHcxNExVZTV3UjIxaWVQdUVWQ2k1NFZaT01aVWVZMTZJeFdoQXRoUXlsQ0h1N3E5cUR2bnpyMks2cHdXeHFZV2NONkdFcWs2czRSNW5ocVpKMXFZWlVXeWV6bk9ZeVF4c2k1RU15WFJpZ3UyS1Nad1RGdXF0QS4yRzR0ZmtMZTZVaXRyUEJjbnktQ2lB.O91xzbuMHNW9BGeccSd8R5p4t2ltxOaHmeyZ6g7jzukFlggOUOD-DKJLl9daA47aHeb31HOh36JOwyraljrcA1weiWyDUEqD5EGTMIU9s5xdHpMPlPZujsGzl6I_ZH_EpWHDih6Gszyu_hgHShvxFL2y5RmKcejOGceYlpAR_ml2x2MI9NfOV2055iHkF59WNC8ZRhpNOfDbT1ky6Uv_9olFME4BJSs2CTViwtxv7O7OpUD4s9iNK0KYFLCR1d0YZzrZ1KBWbUR1rTbuSBUSM59I-neVeUhHtfBFcRvcf9HwMSnDxxbof_gQRzUoVYxcUZAR0zxChNEfbPGjd_zisg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host-path}}/oauth/token",
+											"host": [
+												"{{host-path}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "javascript",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+											"name": "Cache-Control",
+											"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip",
+											"name": "Content-Encoding",
+											"description": "The type of encoding used on the data."
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Expires",
+											"value": "0",
+											"name": "Expires",
+											"description": "Gives the date/time after which the response is considered stale"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache, no-cache",
+											"name": "Pragma",
+											"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+										},
+										{
+											"key": "Server",
+											"value": "Apache-Coyote/1.1",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"name": "Transfer-Encoding",
+											"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding",
+											"name": "Vary",
+											"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff",
+											"name": "X-Content-Type-Options",
+											"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY",
+											"name": "X-Frame-Options",
+											"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block",
+											"name": "X-XSS-Protection",
+											"description": "Cross-site scripting (XSS) filter"
+										}
+									],
+									"cookie": [],
+									"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "OAUTH - CHECK TOKEN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/check",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"oauth",
+								"check"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{host-path}}/oauth/check",
+									"host": [
+										"{{host-path}}"
+									],
+									"path": [
+										"oauth",
+										"check"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "javascript",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Expires",
+									"value": "0",
+									"name": "Expires",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache, no-cache",
+									"name": "Pragma",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"key": "Server",
+									"value": "Apache-Coyote/1.1",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY",
+									"name": "X-Frame-Options",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+						}
+					]
+				},
+				{
+					"name": "OAUTH - REVOKE TOKEN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/oauth/revoke",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"oauth",
+								"revoke"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{host-path}}/oauth/revoke",
+									"host": [
+										"{{host-path}}"
+									],
+									"path": [
+										"oauth",
+										"revoke"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "javascript",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate, no-store",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2015 13:31:36 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Expires",
+									"value": "0",
+									"name": "Expires",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache, no-cache",
+									"name": "Pragma",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"key": "Server",
+									"value": "Apache-Coyote/1.1",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY",
+									"name": "X-Frame-Options",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"name": "X-XSS-Protection",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"body": "{\"access_token\":\"87e22d35-0089-4613-809b-62f248c2c978\",\"token_type\":\"bearer\",\"expires_in\":610,\"scope\":\"read write\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Credit Report",
+			"item": [
+				{
+					"name": "Credit Report - Request New Credit Report - US_EFX",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/US_EFX",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"US_EFX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Summaries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Latest",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/latest",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Latest - EFX",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/latest/US_EFX",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"latest",
+								"US_EFX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Ivana Pony - EFX 001",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/ivanapony-efx-001",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"ivanapony-efx-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Mister Fahntastic - EFX 001",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/misterfahntastic-efx-001",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"misterfahntastic-efx-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Mister Fahntastic - 3B 002",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/misterfahntastic-3B-002",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"misterfahntastic-3B-002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - 3B 002",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-3B-002",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-3B-002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - PRINT",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/print",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"print"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 -  Summary",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/summary",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Revolving Accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/revolvingAccounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"revolvingAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Revolving Account  0001",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/revolvingAccounts/0001",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"revolvingAccounts",
+								"0001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Mortgage Accounts ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/mortgageAccounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"mortgageAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Mortgage Account  0009",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/mortgageAccounts/0009",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"mortgageAccounts",
+								"0009"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Installment Accounts ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/installmentAccounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"installmentAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Installment Account  0013",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/installmentAccounts/0013",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"installmentAccounts",
+								"0013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Other Accounts ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/otherAccounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"otherAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Consumer Statements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/consumerStatements",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"consumerStatements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Personal Information",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/personalInformation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"personalInformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Inquiries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/inquiries",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"inquiries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Collections",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/collections",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"collections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Yudha Mahn - EFX 001 - Public Records",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/yudhamahn-efx-001/publicRecords",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"yudhamahn-efx-001",
+								"publicRecords"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - 3B 002",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-3B-002",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-3B-002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 -  Summary",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/summary",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Revolving Accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/revolvingAccounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"revolvingAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Revolving Account  0001",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/revolvingAccounts/0001",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"revolvingAccounts",
+								"0001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Mortgage Accounts ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/mortgageAccounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"mortgageAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Mortgage Account  0009",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/mortgageAccounts/0004",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"mortgageAccounts",
+								"0004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Installment Accounts ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/installmentAccounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"installmentAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Installment Account  0013",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/installmentAccounts/0006",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"installmentAccounts",
+								"0006"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Other Accounts ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/otherAccounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"otherAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Consumer Statements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/consumerStatements",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"consumerStatements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Personal Information",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/personalInformation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"personalInformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Inquiries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/inquiries",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"inquiries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Collections",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/collections",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"collections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit Report - Bahd Guy - EFX 001 - Public Records",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.equifax.com/personal/consumer-data-suite/v1/creditReport/bahdguy-efx-001/publicRecords",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"equifax",
+								"com"
+							],
+							"path": [
+								"personal",
+								"consumer-data-suite",
+								"v1",
+								"creditReport",
+								"bahdguy-efx-001",
+								"publicRecords"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
