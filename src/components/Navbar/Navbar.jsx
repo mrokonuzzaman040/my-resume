@@ -32,8 +32,8 @@ const Navbar = () => {
                             <NavLink to={'/contact'} className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "text-indigo-500 font-bold text-sm border-b-4 border-b-indigo-500" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"} href="#">Contact</NavLink>
 
-                            <NavLink to={'/hireme'} className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-indigo-500 font-bold text-sm border-b-4 border-b-indigo-500" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"} href="#">Hire Me</NavLink>
+                            {/* <NavLink to={'/hireme'} className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-indigo-500 font-bold text-sm border-b-4 border-b-indigo-500" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"} href="#">Hire Me</NavLink> */}
 
                             {/* <div className="dropdown mb-72">
                                 <div tabIndex={0} role="button" className="btn m-1">
