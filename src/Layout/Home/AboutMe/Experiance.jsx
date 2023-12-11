@@ -42,13 +42,13 @@ const Experiance = () => {
     };
 
     return (
-        <div>
-            <div className="">
+        <div className='p-4'>
+            <div className="bg-gray-50 border-2 rounded-2xl p-4 mb-10">
                 <div className="">
                     <div className="">
                         <Lottie options={experiance}
-                            height={400}
-                            width={400}
+                            height={300}
+                            width={300}
                         />
                     </div>
                     <h1 className="text-4xl text-center">Experiance</h1>
@@ -83,19 +83,15 @@ const Experiance = () => {
                 </VerticalTimeline>
             </div>
 
-            <div className="divider">
-
-            </div>
-
-            <div className="">
+            <div className="bg-gray-50 border-2 rounded-2xl p-4">
                 <div className="">
-                    <h1 className="text-4xl text-center">Education</h1>
                     <div className="">
                         <Lottie options={education}
-                            height={400}
-                            width={400}
+                            height={300}
+                            width={300}
                         />
                     </div>
+                    <h1 className="text-4xl text-center">Education</h1>
                 </div>
                 <VerticalTimeline>
                     <VerticalTimelineElement

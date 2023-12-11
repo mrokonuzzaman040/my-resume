@@ -20,10 +20,19 @@ const Navbar = () => {
                     </div>
                     <div id="navbar-image-and-text-2" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
                         <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-                            <NavLink to={'/'} className="font-medium text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" aria-current="page">Home</NavLink>
-                            <NavLink to={'/about'} className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">About Me</NavLink>
-                            <NavLink to={'/contact'} className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Contact</NavLink>
-                            <NavLink to={'/hireme'} className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Hire Me</NavLink>
+
+                            <NavLink to={'/'} className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-indigo-500 font-bold text-sm border-b-4 border-b-indigo-500" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"}>Home</NavLink>
+
+                            <NavLink to={'/about'} className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-indigo-500 font-bold text-sm border-b-4 border-b-indigo-500" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"}>About Me</NavLink>
+
+                            <NavLink to={'/contact'} className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-indigo-500 font-bold text-sm border-b-4 border-b-indigo-500" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"} href="#">Contact</NavLink>
+
+                            <NavLink to={'/hireme'} className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-indigo-500 font-bold text-sm border-b-4 border-b-indigo-500" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"} href="#">Hire Me</NavLink>
+
                             {/* <div className="dropdown mb-72">
                                 <div tabIndex={0} role="button" className="btn m-1">
                                     Theme
@@ -41,7 +50,7 @@ const Navbar = () => {
                     </div>
                 </nav>
             </header>
-        </div>
+        </div >
     );
 };
 

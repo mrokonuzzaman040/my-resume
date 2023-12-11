@@ -6,7 +6,7 @@ import MyProject from './MyProject/MyProject';
 
 const Home = () => {
     return (
-        <div>
+        <div className=''>
             <Hero></Hero>
             <Skills></Skills>
             <Service></Service>
