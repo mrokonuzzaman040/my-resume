@@ -15,7 +15,8 @@ const MyProject = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div className="relative overflow-hidden rounded-lg shadow-lg group">
-                    <div className="absolute inset-0 z-10 transition duration-300 bg-black bg-opacity-50 group-hover:bg-opacity-0"></div>
+                    <div className="absolute inset-0 z-10 transition duration-300 bg-black bg-opacity-50 group-hover:bg-opacity-0">
+                    </div>
                     <img
                         className="object-cover w-full h-64 transition duration-300 transform group-hover:scale-110"
                         src={bdhomefindes}
