@@ -17,14 +17,14 @@ const Service = () => {
                     <FaCode className='text-7xl text-indigo-600' ></FaCode>
                     <h2>Web Development</h2>
                     <p className="">
-                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on meaningful content.
+                        Web development refers to building and maintaining websites or web applications. It involves front-end development (client-side), back-end development (server-side), and database management to create functional and visually appealing online experiences. Technologies include HTML, CSS, JavaScript, various frameworks, databases, and more.
                     </p>
                 </div>
                 <div className="flex glass rounded-2xl bg-slate-50 p-4 flex-col items-center text-center">
                     <MdOutlineDesignServices className='text-7xl text-indigo-600'></MdOutlineDesignServices>
-                    <h2>ui / ux DESIGNING</h2>
+                    <h2>Web Design</h2>
                     <p className="">
-                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on meaningful content.
+                        Web designing involves creating the visual aspects of websites or web applications. It encompasses layout design, color schemes, typography, graphics, and user interface elements to enhance user experience and convey information effectively. Tools like Adobe XD, Figma, Sketch, and Photoshop are commonly used in web design.
                     </p>
                 </div>
 
