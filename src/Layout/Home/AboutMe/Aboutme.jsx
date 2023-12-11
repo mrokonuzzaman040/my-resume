@@ -18,13 +18,13 @@ const Aboutme = () => {
                 <img className='h-96 w-96 rounded-full' src={profilepic} alt="" />
             </div>
             <div className="flex justify-center gap-4 mb-4">
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/rokonuzzaman040/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="text-4xl text-indigo-500 hover:text-indigo-700" />
                 </a>
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/mrokonuzzaman040" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="text-4xl text-indigo-500 hover:text-indigo-700" />
                 </a>
-                <a href="mailto:your-email@example.com">
+                <a href="mailto:mdrokonuzzamanmail@gmail.com">
                     <FaEnvelope className="text-4xl text-indigo-500 hover:text-indigo-700" />
                 </a>
             </div>

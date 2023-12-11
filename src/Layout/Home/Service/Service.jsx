@@ -12,7 +12,7 @@ const Service = () => {
                 <h2 className='text-2xl font-black'>Services</h2>
                 <h1 className='uppercase text-4xl text-gray-300'>WHAT I OFFER</h1>
             </div>
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5">
                 <div className="flex glass rounded-2xl bg-slate-50 p-4 flex-col items-center text-center">
                     <FaCode className='text-7xl text-indigo-600' ></FaCode>
                     <h2>Web Development</h2>
@@ -27,13 +27,7 @@ const Service = () => {
                         In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on meaningful content.
                     </p>
                 </div>
-                {/* <div className="flex flex-col items-center text-center">
-                    <img src="" alt="" />
-                    <h2>Web Development</h2>
-                    <p className="">
-                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on meaningful content.
-                    </p>
-                </div> */}
+
             </div>
         </div>
     );

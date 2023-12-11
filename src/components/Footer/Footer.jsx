@@ -7,9 +7,9 @@ import { BiLogoUpwork } from "react-icons/bi";
 const Footer = () => {
     return (
         <>
-            <div className="bg-gray-900 text-white">
+            <div className="bg-gray-900 text-white mt-20">
                 <div className="max-w-7xl mx-auto px-4 py-8">
-                    <div className="grid grid-cols-3 items-center gap-2">
+                    <div className="grid lg:grid-cols-3 sm:grid-cols-1 items-center gap-2">
                         <div className="w-full sm:max-w-sm px-4">
                             <div className="mb-4">
                                 <img src={logo} alt="" className="w-24" />
@@ -33,8 +33,8 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="grid col-span-2 grid-cols-3 p-4 m-2">
-                            <div className="w-full px-4">
+                        <div className="grid lg:col-span-2 lg:grid-cols-3 gap-4">
+                            <div className="w-full">
                                 <h4 className="text-xl mb-4">Links</h4>
                                 <div className="flex flex-col gap-2">
                                     <Link to="/" className="hover:text-gray-300">Home</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
                                     <Link to="/contact" className="hover:text-gray-300">Contact</Link>
                                 </div>
                             </div>
-                            <div className="w-full px-4">
+                            <div className="w-full">
                                 <h4 className="text-xl mb-4">Services</h4>
                                 <div className="flex flex-col gap-2">
                                     <Link to="/" className="hover:text-gray-300">Web Development</Link>

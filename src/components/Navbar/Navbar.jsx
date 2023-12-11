@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className="">
-            <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 glass">
+            <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-gray-900 text-sm py-4">
                 <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
                     <div className="flex items-center justify-between">
                         <Link to={'/'} className="inline-flex items-center gap-x-2 text-xl font-semibold text-indigo-600">
