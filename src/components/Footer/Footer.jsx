@@ -15,7 +15,7 @@ const Footer = () => {
                                 <img src={logo} alt="" className="w-24" />
                             </div>
                             <div className="mb-4">
-                                <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                                <p className="text-sm">Md. Rokon Uzzaman ( Full Stack Developer )</p>
                             </div>
                             <div className="flex gap-4 mb-4">
                                 <a href="https://github.com/mrokonuzzaman040" target="_blank" rel="noopener noreferrer">

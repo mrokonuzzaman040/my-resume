@@ -15,7 +15,7 @@ const Aboutme = () => {
     return (
         <div className='w-full max-w-[85rem] sm:px-6 lg:px-8 mx-auto' ref={aboutMeRef}>
             <div className="flex items-center justify-center p-10">
-                <img className='h-96 w-96 rounded-full' src={profilepic} alt="" />
+                <img className='lg:h-96 lg:w-96 sm:h-32 sm:w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={profilepic} alt="" />
             </div>
             <div className="flex justify-center gap-4 mb-4">
                 <a href="https://www.linkedin.com/in/rokonuzzaman040/" target="_blank" rel="noopener noreferrer">
