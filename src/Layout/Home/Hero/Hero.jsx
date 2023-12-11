@@ -1,4 +1,3 @@
-import React from 'react';
 import Typical from 'react-typical'
 import Lottie from 'react-lottie';
 import loti from '../../../image/Animation - 1702238395000.json'

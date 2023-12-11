@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Contact = () => {
@@ -10,8 +12,6 @@ const Contact = () => {
         email: "",
         message: "",
     });
-
-
     const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
@@ -45,7 +45,8 @@ const Contact = () => {
             .then(
                 () => {
                     setLoading(false);
-                    alert("Thank you. I will get back to you as soon as possible.");
+                    // alert("Thank you. I will get back to you as soon as possible.");
+                    toast.success("Thank you. I will get back to you as soon as possible.");
 
                     setForm({
                         name: "",
@@ -55,7 +56,8 @@ const Contact = () => {
                 },
                 (error) => {
                     setLoading(false);
-                    alert("Ahh, something went wrong. Please try again.");
+                    // alert("Ahh, something went wrong. Please try again.");
+                    toast.error("Ahh, something went wrong. Please try again.");
                 }
             );
     };
@@ -65,16 +67,16 @@ const Contact = () => {
             <div class="max-w-2xl lg:max-w-5xl mx-auto">
                 <div class="text-center">
                     <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-black">
-                        Contact us
+                        Contact Me
                     </h1>
                     <p class="mt-1 text-gray-600 dark:text-gray-400">
-                        We'd love to talk about how we can help you.
+                        I'd love to talk about how we can help you.
                     </p>
                 </div>
 
                 <div class="mt-12 grid items-center">
                     <div class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-8 dark:border-gray-700">
-                        <h2 class="mb-8 text-xl font-semibold text-balck">
+                        <h2 class="mb-8 text-xl text-center font-semibold text-balck">
                             Fill in the form
                         </h2>
 
@@ -91,7 +93,7 @@ const Contact = () => {
                                     value={form.name}
                                     onChange={handleChange}
                                     placeholder="What's your good name?"
-                                    className='py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600'
+                                    className='bg-gray-50 p-4 rounded-lg outline-none border-none font-medium'
                                 />
                             </label>
                             <label className='flex flex-col'>
@@ -102,7 +104,7 @@ const Contact = () => {
                                     value={form.email}
                                     onChange={handleChange}
                                     placeholder="Your email address"
-                                    className='bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium'
+                                    className='bg-gray-50 p-4 rounded-lg outline-none border-none font-medium'
                                 />
                             </label>
                             <label className='flex flex-col'>
@@ -113,20 +115,23 @@ const Contact = () => {
                                     value={form.message}
                                     onChange={handleChange}
                                     placeholder='How can I help you?'
-                                    className='bg-tertiary bg-gra py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium'
+                                    className='bg-gray-50 p-4 rounded-lg outline-none border-none font-medium'
                                 />
                             </label>
 
-                            <button
-                                type='submit'
-                                className='bg-tertiary bg-indigo-400 py-3 px-8 rounded-xl outline-none w-fit text-black font-bold shadow-md shadow-primary'
-                            >
-                                {loading ? "Sending..." : "Send"}
-                            </button>
+                            <div className="flex justify-center">
+                                <button
+                                    type='submit'
+                                    className='bg-tertiary bg-indigo-400 py-3 px-8 rounded-xl outline-none w-fit text-black font-bold shadow-md shadow-primary'
+                                >
+                                    {loading ? "Sending..." : "Send"}
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
 
     );
