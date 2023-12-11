@@ -6,7 +6,8 @@ import MyProject from './MyProject/MyProject';
 
 const Home = () => {
     return (
-        <div className=''>
+        <div className='home-container'>
+            <div className='animated-bg'></div>
             <Hero></Hero>
             <Skills></Skills>
             <Service></Service>
