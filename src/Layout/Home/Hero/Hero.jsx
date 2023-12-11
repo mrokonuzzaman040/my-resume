@@ -18,19 +18,19 @@ const Hero = () => {
             <div className="grid grid-cols-2 items-center">
                 <div className="flex flex-col gap-2">
                     <h2 className='uppercase font-bold text-6xl'>Hi, I am Rokon Uzzaman</h2>
-                    <hp className='uppercase'>I am a
+                    <hp className='uppercase text-xl'>I am a
                         <Typical
                             loop={Infinity}
                             wrapper="b"
                             steps={[
-                                ' Web Developer',
-                                1000,
-                                ' Programmer',
-                                1000,
-                                ' Designer',
-                                1000,
-                                ' Freelancer',
-                                1000,
+                                ' Web Developer 💻',
+                                5000,
+                                ' Programmer 🧑🏻‍💻',
+                                5000,
+                                ' Designer ✒️',
+                                5000,
+                                ' Freelancer 💸',
+                                5000,
                             ]}
                         />
                     </hp>
