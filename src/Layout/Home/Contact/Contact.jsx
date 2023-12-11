@@ -24,7 +24,6 @@ const Contact = () => {
         });
     };
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);

@@ -1,5 +1,6 @@
 import React from 'react';
 import profilepic from '../../../image/Person/profile.jpg'
+import Experiance from './Experiance';
 
 const Aboutme = () => {
     return (
@@ -11,6 +12,7 @@ const Aboutme = () => {
                 <h1 className='text-4xl'>Hi, I'm <span>Md. Rokon Uzzaman</span></h1>
                 <p>As a passionate and detail-oriented web developer, I possess expertise in ReactJS, NodeJS, ExpressJS, MongoDB, among others. My specialization lies in designing seamless and user-centric web applications that transform ideas into reality.</p>
             </div>
+            <Experiance />
         </div>
     );
 };
