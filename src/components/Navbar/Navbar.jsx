@@ -1,16 +1,13 @@
 import React from 'react';
 import logo from '../../assets/fabicon.svg'
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-
-
+import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className="">
             <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 glass">
                 <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
                     <div className="flex items-center justify-between">
-                        <Link to={'/'} className="inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white">
+                        <Link to={'/'} className="inline-flex items-center gap-x-2 text-xl font-semibold text-indigo-600">
                             <img className="w-10 h-auto" src={logo} alt="Logo" />
                             Rokon
                         </Link>
@@ -23,10 +20,10 @@ const Navbar = () => {
                     </div>
                     <div id="navbar-image-and-text-2" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
                         <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-                            <a className="font-medium text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-current="page">Landing</a>
-                            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Account</a>
-                            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Work</a>
-                            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Blog</a>
+                            <NavLink to={'/'} className="font-medium text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" aria-current="page">Home</NavLink>
+                            <NavLink to={'/about'} className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">About Me</NavLink>
+                            <NavLink to={'/contact'} className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Contact</NavLink>
+                            <NavLink to={'/hireme'} className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Hire Me</NavLink>
                             {/* <div className="dropdown mb-72">
                                 <div tabIndex={0} role="button" className="btn m-1">
                                     Theme

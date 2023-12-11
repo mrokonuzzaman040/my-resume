@@ -15,7 +15,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Skills = () => {
     return (
-        <div className='w-full max-w-[85rem] sm:px-6 lg:px-8 mx-auto'>
+        <div id='skill' className='w-full max-w-[85rem] sm:px-6 lg:px-8 mx-auto'>
             <div className="mb-10">
                 <h2 className='text-2xl font-black'>Skills</h2>
                 <h1 className='uppercase text-4xl text-gray-300'>My Top Skills</h1>
