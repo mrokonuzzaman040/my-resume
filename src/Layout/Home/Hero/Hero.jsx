@@ -3,6 +3,8 @@ import Lottie from 'react-lottie';
 import loti from '../../../image/Animation - 1702238395000.json'
 import { Link } from 'react-router-dom';
 
+import resume from '../../../assets/resume/Rokon_Uzzaman_web-developer_Resume.pdf'
+
 const Hero = () => {
     const defaultOptions = {
         loop: true,
@@ -35,7 +37,7 @@ const Hero = () => {
                         />
                     </hp>
                     <div className="">
-                        <Link to="https://drive.google.com/file/d/1yR5-0YDo9_rEQL5rdEfyiqJu3VUFi17v/view?usp=sharing" className='btn text-white bg-gradient-to-r from-indigo-500 to-blue-400 hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500'>Download CV</Link>
+                        <a href={resume} download className='btn text-white bg-gradient-to-r from-indigo-500 to-blue-400 hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500'>Download CV</a>
                     </div>
                 </div>
                 <div className="w-full p-4">
@@ -45,7 +47,7 @@ const Hero = () => {
                     />
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
