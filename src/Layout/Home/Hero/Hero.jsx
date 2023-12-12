@@ -1,7 +1,6 @@
 import Typical from 'react-typical'
 import Lottie from 'react-lottie';
 import loti from '../../../image/Animation - 1702238395000.json'
-import { Link } from 'react-router-dom';
 
 import resume from '../../../assets/resume/Rokon_Uzzaman_web-developer_Resume.pdf'
 
